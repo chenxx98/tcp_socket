@@ -332,8 +332,7 @@ int main(int argc, char **argv)
       inet_ntoa(cli_adr.sin_addr),cli_adr.sin_port);
         
     arg = malloc(sizeof(int));
-    *arg = newfd;//必须搞清楚为什么要申请内存
-    
+    *arg = newfd;
           pthread_create(&pid,NULL,func, (void*)arg);  
   }
   close(newfd);
